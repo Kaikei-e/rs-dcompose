@@ -1,0 +1,9 @@
+FROM  rust:1.57.0-buster
+
+RUN curl -y --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh &&\
+  rustup component add rust-src &&\
+  rustup component add rust-analysis &&\
+  rustup component add rls &&\
+  rustup component add rustfmt
+
+COPY ./apps /apps

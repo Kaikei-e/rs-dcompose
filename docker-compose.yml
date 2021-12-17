@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  apps:
+    build: ./dFile
+    tty: true
+    volumes:
+      - ./dFile/apps:/apps
